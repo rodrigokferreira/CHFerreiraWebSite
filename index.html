@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +50,7 @@
                     <a href="#servicos">Serviços</a>
                 </li>
                 <li class="text-white hover:bg-gray-800 px-4 py-2 rounded mb-4 text-2xl">
-                    <a href="#orcamento">Orçamento</a>
+                    <a href="#orcamento" onclick="showModal()">Orçamento</a>
                 </li>
                 <li class="text-white hover:bg-gray-800 px-4 py-2 rounded mb-4 text-2xl">
                     <a href="#sobre">Sobre</a>
@@ -148,7 +148,7 @@
 
     <section class="py-10 bg-black text-white animated">
         <div class="container mx-auto">
-            <div class="content-aside flex w-full flex-col justify-center gap-5 md:flex-row md:mx-auto md:max-w-5xl md:gap-16">
+            <div class="content-aside flex w-full flex-col justify-center gap-5 md:flex-row md:mx-auto md:max-w-5xl md:gap-16 md:items-center">
                 <div class="w-full flex flex-col items-center md:items-start">
                     <h1 class="text-4xl mb-10 w-full text-center
                     md:text-6xl md:w-10">Mais Segurança</h1>
@@ -208,10 +208,43 @@
                 <h3 class="text-4xl mb-2 md:text-5xl">Carlos H. Ferreira</h3>
                 <p class="text-lg mb-6 text-center md:mb-2 md:text-xl">Técnico em Elétrica e Especialista em Manutenção Geral.</p>
                 <p class="text-lg text-center mb-6 md:max-w-3xl md:text-center">Ampla experiência na área de manutenção predial; Elétrica; Sistemas de automação e controle (ENCON e SENTINEL - Q&D); Telecomunicações rede movel; Elaboração de projetos de elétrica e S.P.D.A (Para – Raio); Avaliações e treinamentos de equipes de manutenção; Contratações; Negociação com fornecedores; Implantação de novas rotinas e procedimentos para operação de equipamentos como geradores, no-breaks e C.A.G (centrais de água gelada); Participação em projetos de melhoria contínua.</p>
-                <a href="#" class="bg-black border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300">Entrar em contato</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5511993558089&text=Ol%C3%A1%20ChFerreira,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os!" class="w-48 bg-black border-2 border-white text-white text-center px-6 py-3 rounded-lg flex justify-center hover:bg-gray-800 transition duration-300 md:w-56">Entrar em contato</a>
             </div>
         </div>
     </section>
+
+    <!-- Modal de Orçamento -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <form id="modal-form">
+                <div class="w-full flex items-center justify-between">
+                    <h1>Simular Orçamento</h1>
+                    <img onclick="onClose()" class="w-9 h-9 cursor-pointer" src="./assets/close.svg" alt="Close">
+                </div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border rounded">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border rounded">
+    
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required class="w-full p-2 mb-4 border rounded">
+    
+                <label for="service-type">Tipo de Serviço:</label>
+                <select id="service-type" name="service-type" required class="w-full p-2 mb-4 border rounded">
+                    <option value="">Selecione um serviço</option>
+                    <option value="Manutenção Elétrica">Manutenção Elétrica</option>
+                    <option value="Manutenção Geral">Manutenção Geral</option>
+                </select>
+    
+                <label for="details">Detalhes do Serviço:</label>
+                <textarea id="details" name="details" rows="4" required class="w-full p-2 mb-4 border rounded"></textarea>
+    
+                <button type="button" id="send-data"
+                    class="bg-black text-white border border-white px-4 py-2 rounded-lg mt-4 hover:bg-gray-900 transition duration-300">Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="text-white py-6 bg-zinc-700 md:px-16">
@@ -237,14 +270,22 @@
                 <h2 class="text-lg mb-2 text-center md:text-start">Contato</h2>
                 <div class="flex items-center mx-auto">
                     <img src="./assets/icons/Whats.png" alt="Ícone WhatsApp" class="w-6 h-auto mr-2">
-                    <p class="w-full">(13) 11111-1111</p>
+                    <p class="w-full">(11) 99355-8089</p>
+                </div>
+                <!-- Ícones de Redes Sociais -->
+                <div class="flex items-center mt-4 justify-center md:justify-start ">
+                    <a href="https://www.linkedin.com/in/carlos-henrique-ferreira-b0367063/" target="_blank" class="mr-4">
+                        <img src="./assets/icons/linkedin.png" alt="Ícone Facebook" class="w-6 h-auto">
+                    </a>
+                    <a href="https://www.facebook.com/C.h.f.obras/" target="_blank" class="mr-4">
+                        <img src="./assets/icons/facebook.png" alt="Ícone LinkedIn" class="w-6 h-auto">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
     
-    
-
+    <!-- Scripts -->
     <script>
         const nav = document.getElementById('nav');
         const logoDiv = document.getElementById('div-image');
@@ -287,10 +328,25 @@
                 menuMobile.classList.add("hidden");
             });
         });
+
+
+        // Exibe o modal 
+        function showModal() {
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function onClose() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function dataWhatsapp(name, email, phone, details, select) {
+            
+        }
     
         window.addEventListener('load', checkWindowWidth);
         window.addEventListener('resize', checkWindowWidth);
     </script>
+
 
     <!-- Script da animação -->
     <script>
@@ -319,6 +375,78 @@
             window.addEventListener('resize', checkAnimation);
             window.addEventListener('load', checkAnimation);
         });
+    </script>
+
+    <!--Script do Orçamento -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('overlay');
+    const orcamentoLink = document.querySelector('a[href="#orcamento"]');
+    
+    orcamentoLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Previne o comportamento padrão do link
+        overlay.style.display = 'flex'; // Mostra o modal
+    });
+
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+            overlay.style.display = 'none'; // Esconde o modal se clicar fora dele
+        }
+        });
+    });
+
+    </script>
+
+    <!-- Envio de formulário para o console -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('modal-form');
+            const sendDataButton = document.getElementById('send-data');
+
+            sendDataButton.addEventListener('click', () => {
+                // Pega os valores dos inputs
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const serviceType = document.getElementById('service-type').value;
+                const details = document.getElementById('details').value;
+
+                // Cria um objeto com os dados
+                const formData = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    serviceType: serviceType,
+                    details: details
+                };
+
+                // Checa se os dados estão preenchidos, se não estiver, retorna o erro.
+                if(formData.name === '' || formData.email === '' || formData.phone === '' || formData.details === '' || formData.serviceType === '') {
+                    alert('Preencha todos os campos!');
+                    return;
+                }
+                
+                dataWhatsapp(name, email, phone, details, serviceType);
+
+                // Limpa os campos
+                form.reset();
+
+                // Fechar o modal
+                onClose();
+            });
+        });
+
+        function dataWhatsapp(name, email, phone, details, serviceType) {
+            const message = `
+            Olá, meu nome é ${name}. 
+            Meu email é ${email} e meu telefone é ${phone}. 
+            Estou interessado no serviço de ${serviceType}. 
+            Aqui estão os detalhes do serviço que preciso: ${details}.`;
+
+            // Código para enviar a mensagem pelo WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=+551199355-8089&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
     </script>
 </body>
 </html>
