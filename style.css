@@ -1,0 +1,24 @@
+#main-width{
+    height: 32em;
+}
+
+#image-config {
+    background-image: url('./assets/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+/* Animação */
+.animated {
+    opacity: 0.3;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

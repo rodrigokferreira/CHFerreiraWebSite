@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChF Manutenção</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-rubik">
+    <header class="flex justify-between items-center px-8 shadow-md">
+        <div 
+        id="div-image"
+        class="w-full flex items-center">
+            <img 
+            id="image-config"
+            src="./assets/logo.png" 
+            alt="Logo da ChF Manutenção" 
+            class="h-28 w-28 object-cover">
+
+            <img 
+            id="menu"
+            class="w-8 h-8 absolute right-10 cursor-pointer"
+            src="./assets/menu.svg" 
+            alt="Menu">
+        </div>
+        <nav id="nav">
+            <ul class="flex gap-5 text-xl">
+                <li><a href="#servicos" class="text-white hover:bg-gray-800 px-4 py-2 rounded">Serviços</a></li>
+                <li><a href="#orcamento" class="text-white hover:bg-gray-800 px-4 py-2 rounded">Orçamento</a></li>
+                <li><a href="#sobre" class="text-white hover:bg-gray-800 px-4 py-2 rounded">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Div menu mobile -->
+    <div 
+    id="menu-mobile"
+    class="w-full h-full fixed inset-0 bg-black z-50 hidden">
+        <nav class="w-full flex justify-center flex-col items-center gap-10">
+
+            <img 
+            class="w-32 h-32 -mt-2"
+            src="./assets/logo.png" 
+            alt="Logo">
+
+            <ul class="flex flex-col items-center">
+                <li class="text-white hover:bg-gray-800 px-4 py-2 rounded mb-4 text-2xl">
+                    <a href="#servicos">Serviços</a>
+                </li>
+                <li class="text-white hover:bg-gray-800 px-4 py-2 rounded mb-4 text-2xl">
+                    <a href="#orcamento">Orçamento</a>
+                </li>
+                <li class="text-white hover:bg-gray-800 px-4 py-2 rounded mb-4 text-2xl">
+                    <a href="#sobre">Sobre</a>
+                </li>
+            </ul>
+
+            <!-- Button close menu mobile -->
+            <button
+            id="button-close-menu-mobile"
+            class="absolute top-9 right-9">
+                <svg 
+                    class="w-10 h-10 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-x"
+                >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </div>
+    
+    <!-- Inicio -->
+    <main 
+    class="background-image relative flex justify-center items-center animated" 
+    id="main-width" 
+    style="background-image: url(./assets/fundo.jpg); background-size: cover; background-position: center;">
+        <div class="content text-center z-10 w-full flex justify-center flex-col animated">
+            <h1 class="text-4xl mb-2">
+                <span class="text-3xl md:text-5xl mb-3">Manutenções</span>
+                <span class="text-3xl md:text-5xl">Gerais</span>
+            </h1>
+            <p class="text-xl my-4 w-full max-w-2xl mx-auto">O profissional de manutenção desempenha um papel crucial assegurando o conforto, segurança e funcionamento adequado das ferramentas e processos essenciais em diversas áreas.</p>
+            <button class="bg-black text-white border border-white px-6 py-3 rounded-lg w-56 mx-auto mt-10
+            hover:bg-gray-900 transition duration-300">Contrate Agora</button>
+        </div>
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+    </main>
+
+
+    <!-- Serviços -->
+    <section class="pt-20 pb-28 mx-auto md:max-w-7xl md:w-full">
+        <h1 id="servicos" class="text-center text-4xl mb-12 animated">Serviços</h1>
+        <div class="grid grid-cols-1 gap-6 w-full mx-auto max-w-xs animated 
+        sm:flex sm:justify-center md:max-w-7xl md:mx-0 md:w-full">
+            <div class="w-full sm:w-80 p-4 sm:p-6 rounded-lg shadow-md border border-2 border-white mb-6 flex flex-col items-center">
+                <img src="./assets/icons/raio.png" alt="Ícone de raio" class="w-10 h-12 mx-auto mb-4">
+                <h2 class="text-2xl mb-4 text-center">Instalações Elétricas</h2>
+                <p class="text-lg text-center mb-4">Serviços de instalação elétrica garantem a correta implementação de sistemas elétricos em residências, empresas e espaços comerciais.</p>
+            </div>
+            <div class="w-full sm:w-80 p-4 sm:p-6 rounded-lg shadow-md border border-2 border-white mb-6 flex flex-col items-center">
+                <img src="./assets/icons/engrenagem.png" alt="Ícone de engrenagem" class="w-12 h-12 mx-auto mb-4">
+                <h2 class="text-2xl mb-4 text-center">Manutenção Industrial</h2>
+                <p class="text-lg text-center mb-4">Meu serviço de manutenção elétrica garante o funcionamento contínuo e seguro de sistemas elétricos existentes.</p>
+            </div>
+            <div class="w-full sm:w-80 p-4 sm:p-6 rounded-lg shadow-md border border-2 border-white mb-6 flex flex-col items-center">
+                <img src="./assets/icons/mala.png" alt="Ícone de maleta" class="w-12 h-12 mx-auto mb-4">
+                <h2 class="text-2xl mb-4 text-center">Serviços de Suporte</h2>
+                <p class="text-lg text-center mb-4">Ofereço suporte elétrico especializado para resolver problemas emergenciais e fornecer assistência técnica contínua.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <article class="w-full image-tools relative h-96 flex justify-center items-center animated" style="background-image: url('./assets/tools.jpg');">
+        <div class="text-center z-10 w-full
+        md:max-w-3xl">
+            <h2 class="text-4xl mb-4">Serviços rápidos e seguros para suas necessidades elétricas e gerais.</h2>
+            <p class="text-xl">Na Empresa Ch.Ferreira oferecemos uma gama completa de serviços de manutenção para residências e empresas.</p>
+        </div>
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+    </article>
+
+    <section class="py-10 animated">
+        <div class="container mx-auto flex flex-col justify-center items-center gap-10 w-full max-w-2xl text-center 
+        md:flex-row md:max-w-5xl">
+            <div class="aside-content w-full max-w-2xl flex flex-col items-center md:items-start">
+                <h1 class="text-3xl mb-4 w-full max-w-96 md:w-full md:max-w-7xl">Atendimento em toda a Baixada Santista</h1>
+                <p class="text-lg mb-6">Atendimento eficaz em toda a Baixada Santista. Com vasta experiência e dedicação, presto serviços de manutenção de alta qualidade para empresas.</p>
+                <p class="text-lg mb-6">Em toda a região, sempre pronto para resolver qualquer problema com rapidez e atenção aos detalhes.</p>
+            </div>
+            <div>
+                <img src="./assets/Pg.png" alt="Imagem de equipamentos">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-black text-white animated">
+        <div class="container mx-auto">
+            <div class="content-aside flex w-full flex-col justify-center gap-5 md:flex-row md:mx-auto md:max-w-5xl md:gap-16">
+                <div class="w-full flex flex-col items-center md:items-start">
+                    <h1 class="text-4xl mb-10 w-full text-center
+                    md:text-6xl md:w-10">Mais Segurança</h1>
+                    <p id="description-mobile" class="text-lg mb-6 w-full max-w-lg text-center">Na empresa Ch.Ferreira oferecemos uma gama completa de serviços de manutenção para residências e empresas.</p>
+                    <p id="description-desktop" class="text-lg mb-6 w-full max-w-lg text-start">Na empresa Ch.Ferreira oferecemos uma gama completa de serviços de manutenção para residências e empresas. 
+                        <br /><br />
+                        Nosso objetivo é proporcionar um serviço confiável, de alta qualidade e acessível, garantindo que todas as suas necessidades de manutenção sejam atendidas com eficiência e profissionalismo.</p>
+                </div>
+                <div class="flex flex-col gap-6 w-full max-w-xl mx-auto">
+                    <div class="classes-content bg-white rounded-lg flex items-center gap-5 md:gap-2">
+                        <div class="number bg-black text-white rounded-l-lg p-3 h-full flex items-center justify-center w-14">
+                            <h1 class="text-4xl">1</h1>
+                        </div>
+                        <div class="atributos flex-1">
+                            <h2 class="text-2xl font-bold mb-2 text-black mt-2">Confiabilidade</h2>
+                            <p class="text-black mb-3">Serviço de manutenção confiável que garante a segurança e eficiência de sistemas elétricos, contribuindo para o funcionamento ininterrupto.</p>
+                        </div>
+                    </div>
+                    <div class="classes-content bg-white rounded-lg flex items-center gap-2">
+                        <div class="number bg-black text-white rounded-l-lg p-3 h-full flex items-center justify-center w-14">
+                            <h1 class="text-4xl">2</h1>
+                        </div>
+                        <div class="atributos flex-1">
+                            <h2 class="text-2xl font-bold mb-2 text-black mt-2">Profissionalismo</h2>
+                            <p class="text-black mb-3">Profissionalismo em todos os aspectos do serviço, garantindo um atendimento cortês, pontual e eficiente, alinhado às necessidades do cliente.</p>
+                        </div>
+                    </div>
+                    <div class="classes-content bg-white rounded-lg flex items-center gap-2">
+                        <div class="number bg-black text-white rounded-l-lg p-3 h-full flex items-center justify-center w-14">
+                            <h1 class="text-4xl">3</h1>
+                        </div>
+                        <div class="atributos flex-1">
+                            <h2 class="text-2xl font-bold mb-2 text-black mt-2">Rapidez</h2>
+                            <p class="text-black mb-3">Serviços ágeis e eficientes, assegurando que as demandas de manutenção sejam atendidas prontamente, minimizando interrupções e garantindo a continuidade do funcionamento.</p>
+                        </div>
+                    </div>
+                    <div class="classes-content bg-white rounded-lg flex items-center gap-2">
+                        <div class="number bg-black text-white rounded-l-lg p-3 h-full flex items-center justify-center w-14    ">
+                            <h1 class="text-4xl">4</h1>
+                        </div>
+                        <div class="atributos flex-1">
+                            <h2 class="text-2xl font-bold mb-2 text-black mt-2">Eficiência</h2>
+                            <p class="text-black mb-3">Maximização da eficiência operacional por meio de práticas de manutenção preventiva e corretiva, garantindo um desempenho ideal dos sistemas e prolongando sua vida útil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="py-10 text-white animated">
+        <div class="container mx-auto flex justify-center">
+            <div class="about-content flex flex-col items-center gap-6">
+                <h1 id="sobre" class="text-4xl mb-4">Sobre mim</h1>
+                <img src="./assets/icons/about.png" alt="Ícone de sobre" class="w-56 mb-4">
+                <h3 class="text-4xl mb-2 md:text-5xl">Carlos H. Ferreira</h3>
+                <p class="text-lg mb-6 text-center md:mb-2 md:text-xl">Técnico em Elétrica e Especialista em Manutenção Geral.</p>
+                <p class="text-lg text-center mb-6 md:max-w-3xl md:text-center">Ampla experiência na área de manutenção predial; Elétrica; Sistemas de automação e controle (ENCON e SENTINEL - Q&D); Telecomunicações rede movel; Elaboração de projetos de elétrica e S.P.D.A (Para – Raio); Avaliações e treinamentos de equipes de manutenção; Contratações; Negociação com fornecedores; Implantação de novas rotinas e procedimentos para operação de equipamentos como geradores, no-breaks e C.A.G (centrais de água gelada); Participação em projetos de melhoria contínua.</p>
+                <a href="#" class="bg-black border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300">Entrar em contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-6 bg-zinc-700 md:px-16">
+        <div class="mx-auto flex flex-col md:flex-row items-center justify-center px-4">
+            <!-- Logo -->
+            <div class="mb-4 md:mb-0 md:mr-auto">
+                <img src="./assets/logoT.png" alt="Logo Ch. Ferreira" class="w-36 h-auto mr-4">
+            </div>
+    
+            <!-- Texto de Copyright e Créditos -->
+            <div class="flex flex-col items-center justify-center text-center mb-14 md:text-left mb-4 md:mb-0">
+                <p class="mb-2 w-full text-center">Ch. Ferreira 2024 &copy; Todos os direitos reservados</p>
+    
+                <!-- Créditos -->
+                <div class="flex items-center relative mx-auto justify-center mb-10 md:mb-0">
+                    <p class="me-28 mt-1">Created by</p>
+                    <img src="./assets/icons/logoRk.png" alt="Logo R&K" class="w-32 h-auto absolute left-14">
+                </div>
+            </div>
+    
+            <!-- Informações de Contato -->
+            <div class="md:ml-auto">
+                <h2 class="text-lg mb-2 text-center md:text-start">Contato</h2>
+                <div class="flex items-center mx-auto">
+                    <img src="./assets/icons/Whats.png" alt="Ícone WhatsApp" class="w-6 h-auto mr-2">
+                    <p class="w-full">(13) 11111-1111</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <script>
+        const nav = document.getElementById('nav');
+        const logoDiv = document.getElementById('div-image');
+        const menuIcon = document.getElementById("menu");
+        const menuMobile = document.getElementById("menu-mobile");
+        const closeMenuButton = document.getElementById("button-close-menu-mobile");
+        const descriptionDesktop = document.getElementById("description-desktop");
+        const descriptionMobile = document.getElementById("description-mobile");
+    
+        function checkWindowWidth() {
+            if (window.innerWidth < 550) {
+                nav.style.display = 'none';
+                logoDiv.style.display = 'flex';
+                logoDiv.style.justifyContent = 'center';
+                menu.style.display = 'block';
+                descriptionDesktop.style.display = 'none';
+                descriptionMobile.style.display = 'block';
+            } else {
+                nav.style.display = 'block';
+                logoDiv.style.display = 'block';
+                logoDiv.style.justifyContent = 'start';
+                menu.style.display = 'none';
+                descriptionDesktop.style.display = 'block';
+                descriptionMobile.style.display = 'none';
+            }
+        }       
+    
+        menuIcon.addEventListener("click", () => {
+            menuMobile.classList.remove("hidden");
+        });
+    
+        closeMenuButton.addEventListener("click", () => {
+            menuMobile.classList.add("hidden");
+        });
+    
+        // Fechar menu ao clicar em um link do menu mobile
+        const links = document.querySelectorAll('#menu-mobile ul li a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.add("hidden");
+            });
+        });
+    
+        window.addEventListener('load', checkWindowWidth);
+        window.addEventListener('resize', checkWindowWidth);
+    </script>
+
+    <!-- Script da animação -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animated');
+    
+            function checkAnimation() {
+                animatedElements.forEach(element => {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+    
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+                return (
+                    rect.bottom > 0 &&
+                    rect.top < windowHeight
+                );
+            }
+    
+            window.addEventListener('scroll', checkAnimation);
+            window.addEventListener('resize', checkAnimation);
+            window.addEventListener('load', checkAnimation);
+        });
+    </script>
+</body>
+</html>
